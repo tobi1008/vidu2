@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ taglib prefix="core" uri="jakarta.tags.core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+
+<p>Content của User<p/>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +18,7 @@
 <body>
 
 
-    <core:if test="${not empty sessionScope.loggedInUser}">
+    <c:if test="${not empty sessionScope.loggedInUser}">
 
         <h1 class="welcome">
 
@@ -29,19 +31,19 @@
         
 
         <ul class="task-list">
-            <core:forEach var="task" items="${taskList}">
-                <li><core:out value="${task}"/></li>
-            </core:forEach>
+            <c:forEach var="task" items="${taskList}">
+                <li><c:out value="${task}"/></li>
+            </c:forEach>
         </ul>
 
-    </core:if>
+    </c:if>
 
 
-    <core:if test="${empty sessionScope.loggedInUser}">
+    <c:if test="${empty sessionScope.loggedInUser}">
         <h2>Bạn chưa đăng nhập!</h2>
         <p>Vui lòng quay lại trang đăng nhập.</p>
         <a href="login">Quay lại</a>
-    </core:if>
+    </c:if>
 
 </body>
 </html>

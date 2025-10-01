@@ -1,4 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<p> Phần content của ADMIN <p/>
+    <h1>Header của User</h1>

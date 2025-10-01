@@ -19,7 +19,7 @@ public class HomeController extends HttpServlet {
         String name = "quyen";
 
         req.setAttribute("name", name); 
-        RequestDispatcher rd = req.getRequestDispatcher("/views/home.jsp"); 
+        RequestDispatcher rd = req.getRequestDispatcher("/views/web/home.jsp"); 
         rd.forward(req, resp); 
     }
 
